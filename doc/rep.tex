@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{subfigure}
+\usepackage{ctex}
+\usepackage{graphicx}
+
+\renewcommand{\figurename}{图}
+
+\begin{document}
+
+\title{Computer Organization: Homework 1}
+
+\author{陈键飞\\CST03 2010011291}
+
+\maketitle
+
+\section{General}
+\subsection{程序的结束}
+在模拟器中，代表程序结束的是RET（0xFFFF），但汇编器并不能产生这个代码。
+所以我们在每个代码的最后一行加上了一句NOP，然后用十六进制编辑工具手动修改成RET（0xFFFF）。
+
+\section{The Fibonacci Sequence}
+
+代码如下：
+
+\begin{lstlisting}
+; Calculate the first 50 Fibonacci numbers. F1 = 1, F2 = 1
+; The result is stored in 0x8500
+LI R1 0x01
+LI R2 0x01
+LI R3 0x85
+SLL R3 R3 0x00
+LI R4 0x19
+SW R3 R1 0x00
+SW R3 R2 0x01
+ADDU R1 R2 R1
+ADDU R1 R2 R2
+ADDIU R3 0x02
+ADDIU R4 0xff
+BNEZ R4 0xf9
+\end{lstlisting}
+
+程序运行结果如图~\ref{result_1}，我们输出了0x33=51个数，前50个是Fibonacci，最后一个未被修改，所以为0。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=7.5cm]{result_1.png}
+\caption{Runtime result of the Fibonacci Number program}
+\label{result_1}
+\end{figure}
+
+\section{实验完成情况}
+
+\section{实验体会}
+
+\end{document} 
