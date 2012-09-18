@@ -153,7 +153,38 @@ NOP
 \label{result_3}
 \end{figure}
 
+\section{Echo of Digit Characters}
+代码如下：
+\begin{lstlisting}
+LI R6 0xBF
+SLL R6 R6 0x00
 
+loop:
+LW R6 R1 0x00		; Read a character
+
+SLTI R1 0x30		; If R1 < 30 then finish
+BTNEZ finish
+NOP
+SLTI R1 0x40		; If R1 >= 40 then finish
+BTEQZ finish
+NOP
+
+SW R6 R1 0x00		; echo
+B loop
+NOP
+
+finish:
+JR R6
+NOP
+\end{lstlisting}
+
+程序运行结果如图~\ref{result_4}。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=7.5cm]{result_4.png}
+\caption{Runtime result of the Echo of Digit Characters}
+\label{result_4}
+\end{figure}
 
 \section{实验完成情况}
 
