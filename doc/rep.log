@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2012.5.27)  18 SEP 2012 16:43
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2012.5.27)  19 SEP 2012 00:43
 entering extended mode
 **C:/Users/Chris/SkyDrive/Documents/¿Î³Ì/¼ÆÔ­/Projects/Project1_Assembly/Assemb
 ly--Computer-Organization-Project-1-/doc/rep.tex
@@ -484,21 +484,45 @@ File: result_4.png Graphic file (type png)
  <use result_4.png> [6 <C:/Users/Chris/SkyDrive/Documents/¿Î³Ì/¼ÆÔ­/Projects/Pr
 oject1_Assembly/Assembly--Computer-Organization-Project-1-/doc/result_4.png (PN
 G copy)>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 205.
+
+
+(C:\CTEX\MiKTeX\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 205.
+ [7]
+<result_5.png, id=70, 258.9675pt x 207.02344pt>
+File: result_5.png Graphic file (type png)
+ <use result_5.png>
+Overfull \hbox (26.4447pt too wide) in paragraph at lines 261--262
+[]\OT1/cmr/m/n/10 Kenerl\C19/rm/m/n/10/43 Ú\OT1/cmr/m/n/10 Term\C19/rm/m/n/10/6
+4 ƒ \C19/rm/m/n/10/45 m \C19/rm/m/n/10/40  \C19/rm/m/n/10/57 Ï \C19/rm/m/n/10/
+60 Õ  \C19/rm/m/n/10/61 Æ \C19/rm/m/n/10/55 ´|\C19/rm/m/n/10/26 µ| \C19/rm/m/n
+/10/39 D \C19/rm/m/n/10/56 x \C19/rm/m/n/10/41  \C19/rm/m/n/10/46 ? \C19/rm/m/
+n/10/64 › \C19/rm/m/n/10/55 ê \C19/rm/m/n/10/44 ½ \C19/rm/m/n/10/39 “ \C19/rm/m
+/n/10/49 è|\C19/rm/m/n/10/26 §| \OT1/cmr/m/n/10 Kenerl\C19/rm/m/n/10/57 Ï \C19/
+rm/m/n/10/43 L\OT1/cmr/m/n/10 Simulator\C19/rm/m/n/10/42 K
+ []
+
+[8 <C:/Users/Chris/SkyDrive/Documents/¿Î³Ì/¼ÆÔ­/Projects/Project1_Assembly/Asse
+mbly--Computer-Organization-Project-1-/doc/result_5.png (PNG copy)>] [9]
 (C:\Users\Chris\SkyDrive\Documents\¿Î³Ì\¼ÆÔ­\Projects\Project1_Assembly\Assembl
 y--Computer-Organization-Project-1-\doc\rep.aux) ) 
 Here is how much of TeX's memory you used:
- 6947 strings out of 495362
- 95378 string characters out of 3184023
- 169873 words of memory out of 3000000
- 9954 multiletter control sequences out of 15000+200000
- 23572 words of font info for 82 fonts, out of 3000000 for 9000
+ 7045 strings out of 495362
+ 97090 string characters out of 3184023
+ 169881 words of memory out of 3000000
+ 10044 multiletter control sequences out of 15000+200000
+ 25062 words of font info for 87 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  31i,7n,35p,525b,1772s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/WINDOWS/Fonts/simhei.ttf>
 <C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/sim
 hei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/F
-onts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/W
-INDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.t
+onts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/W
+INDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.t
 tc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/
 simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOW
 S/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C
@@ -506,18 +530,19 @@ S/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C
 n.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fon
 ts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WIN
 DOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc
-><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/si
-mhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/
-Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/
-WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.
-ttc><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/CTEX/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
-/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/CTEX/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb>
-Output written on rep.pdf (6 pages, 233563 bytes).
+><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/si
+msun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/
+Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/
+WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.
+ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts
+/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/CTEX/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmr17.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on rep.pdf (9 pages, 272760 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
+ 245 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

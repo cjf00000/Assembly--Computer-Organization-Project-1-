@@ -54,7 +54,211 @@ BNEZ R4 0xf9
 \label{result_1}
 \end{figure}
 
-\section{}
+\section{ASCII Printable Characters}
+
+ASCII中可打印的字符集从0x20到0x7F。代码如下。
+\begin{lstlisting}
+; Print all ascii printable characters: from 20 to 7E
+; Author:	Jianfei CHEN
+; Date:		2012-9-18
+
+LI R6 0xBF		; R6 is the IO port
+SLL R6 R6 0x00
+
+LI R1 0x20		; Set initial value: print r1
+
+loop:
+SW R6 R1 0x00		; PRINT R1
+ADDIU R1 0x01
+CMPI R1 0x80
+BTNEZ loop
+NOP
+
+finish:
+JR R6			; Crash the machine
+NOP
+\end{lstlisting}
+
+程序运行结果如图~\ref{result_2}。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=13cm]{result_2.png}
+\caption{Runtime result of the ASCII Printable Characters}
+\label{result_2}
+\end{figure}
+
+\section{Lower Case Conversion}
+
+要将大写字母转为小写字母，只需将其加上0x20。
+
+实验中，函数subRoutine从R1起连续R2个地址读取数据，将其输出后转为小写字母写回内存。
+由于模拟器未实现JALR，使用MFPC计算返回地址，存入R7；用JR R7来返回。
+
+代码如下：
+\begin{lstlisting}
+LI R6 0xBF		; R6 is the IO port
+SLL R6 R6 0x00
+
+LI R1 0xC0		; R1 is the starting address
+SLL R1 R1 0x00
+
+LI R2 0x05		; read 5 numbers
+
+LI R3 0x41		; Write 'APPLE'
+SW R1 R3 0x00
+LI R3 0x50
+SW R1 R3 0x01
+LI R3 0x50
+SW R1 R3 0x02
+LI R3 0x4C
+SW R1 R3 0x03
+LI R3 0x45
+SW R1 R3 0x04
+
+MFPC R7			; save return address to R7
+ADDIU R7 0x03	
+B subRoutine		; call subRoutine
+NOP
+
+finish:
+JR R6			; Crash the machine
+NOP
+
+subRoutine:		; Read and output $R2 consequent characters starting from memory address $R1
+
+NOP
+loop:
+LW R1 R3 0x00		; Load to R3
+SW R6 R3 0x00		; Print to screen
+ADDIU R3 0x20		; R3 += 20 = lower(R3)
+SW R1 R3 0x00		; Write back
+
+ADDIU R1 0x01		; Address++
+ADDIU R2 0xFF		; Count--
+
+BNEZ R2 loop		; loop
+NOP
+
+JR R7			; return
+NOP
+\end{lstlisting}
+
+在实验中，我们向C000开始的5个地址写入了字符串'APPLE'.
+
+程序运行结果如图~\ref{result_3}。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=7.5cm]{result_3.png}
+\caption{Runtime result of the Lower Case Conversion}
+\label{result_3}
+\end{figure}
+
+\section{Echo of Digit Characters}
+代码如下：
+\begin{lstlisting}
+LI R6 0xBF
+SLL R6 R6 0x00
+
+loop:
+LW R6 R1 0x00		; Read a character
+
+SLTI R1 0x30		; If R1 < 30 then finish
+BTNEZ finish
+NOP
+SLTI R1 0x40		; If R1 >= 40 then finish
+BTEQZ finish
+NOP
+
+SW R6 R1 0x00		; echo
+B loop
+NOP
+
+finish:
+JR R6
+NOP
+\end{lstlisting}
+
+程序运行结果如图~\ref{result_4}。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=7.5cm]{result_4.png}
+\caption{Runtime result of the Echo of Digit Characters}
+\label{result_4}
+\end{figure}
+
+\section{Custom Program: Random Number Generator}
+自选程序是一个随机数生成器。随机种子是R4，算法是Random = Seed $\times$ 107 +
+ 91。代码如下。
+\begin{lstlisting}
+LI R4 0x43		; R4 = 0x4321
+SLL R4 R4 0x00
+ADDIU R4 0x21
+
+LI R1 0xC0		; R1 = 0xC000
+SLL R1 R1 0x00
+
+LI R5 0x6B		; R5 = 0x6B
+
+LI R0 0x10		; Generate 16 random numbers
+forRandom:
+
+; Perform R4 * R5
+; mask = 1;
+; ret = 0;
+; while (mask)
+; {
+; 	temp = R5 and mask;
+;	if (temp) ret += R4;
+;	R4 = R4 << 1;
+;	mask = mask << 1;
+; }
+; mask = R6; ret = R4; temp = R3; oldR4 = R2;
+LI R6 0x01
+MOVE R2 R4
+LI R4 0x00
+
+forDigit:
+MOVE R3 R5	; temp = R5 and mask;
+AND R3 R6
+BEQZ R3 skip	; if (!temp) skip;
+NOP
+ADDU R2 R4 R4	; ret += oldR4
+skip:
+SLL R6 R6 0x01	; mask <<= 1
+SLL R2 R2 0x01	; oldR4 <<= 1
+
+BNEZ R6 forDigit	; do while(mask)
+NOP
+
+; Perform R4 += 0x5B
+ADDIU R4 0x5B
+
+; Output R4
+SW R1 R4 0x00
+ADDIU R1 0x01
+
+; Loop
+ADDIU R0 0xFF
+BNEZ R0 forRandom
+NOP
+
+finish:
+LI R6 0xBF
+SLL R6 R6 0x00
+JR R6
+NOP
+\end{lstlisting}
+
+程序运行结果如图~\ref{result_5}。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=7.5cm]{result_5.png}
+\caption{Runtime result of the Random Number Generator}
+\label{result_5}
+\end{figure}
+
+\section{阅读代码}
+Kenerl和Term之间的通讯协议是：传送二进制数或代码，Kenerl通过Simulator负责二进制的运行，Term负责二进制与文本间的转换。
 
 \section{实验完成情况}
 

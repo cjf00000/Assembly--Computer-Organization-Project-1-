@@ -186,8 +186,86 @@ NOP
 \label{result_4}
 \end{figure}
 
+\section{Custom Program: Random Number Generator}
+自选程序是一个随机数生成器。随机种子是R4，算法是Random = Seed $\times$ 107 +
+ 91。代码如下。
+\begin{lstlisting}
+LI R4 0x43		; R4 = 0x4321
+SLL R4 R4 0x00
+ADDIU R4 0x21
+
+LI R1 0xC0		; R1 = 0xC000
+SLL R1 R1 0x00
+
+LI R5 0x6B		; R5 = 0x6B
+
+LI R0 0x10		; Generate 16 random numbers
+forRandom:
+
+; Perform R4 * R5
+; mask = 1;
+; ret = 0;
+; while (mask)
+; {
+; 	temp = R5 and mask;
+;	if (temp) ret += R4;
+;	R4 = R4 << 1;
+;	mask = mask << 1;
+; }
+; mask = R6; ret = R4; temp = R3; oldR4 = R2;
+LI R6 0x01
+MOVE R2 R4
+LI R4 0x00
+
+forDigit:
+MOVE R3 R5	; temp = R5 and mask;
+AND R3 R6
+BEQZ R3 skip	; if (!temp) skip;
+NOP
+ADDU R2 R4 R4	; ret += oldR4
+skip:
+SLL R6 R6 0x01	; mask <<= 1
+SLL R2 R2 0x01	; oldR4 <<= 1
+
+BNEZ R6 forDigit	; do while(mask)
+NOP
+
+; Perform R4 += 0x5B
+ADDIU R4 0x5B
+
+; Output R4
+SW R1 R4 0x00
+ADDIU R1 0x01
+
+; Loop
+ADDIU R0 0xFF
+BNEZ R0 forRandom
+NOP
+
+finish:
+LI R6 0xBF
+SLL R6 R6 0x00
+JR R6
+NOP
+\end{lstlisting}
+
+程序运行结果如图~\ref{result_5}。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=7.5cm]{result_5.png}
+\caption{Runtime result of the Random Number Generator}
+\label{result_5}
+\end{figure}
+
+\section{阅读代码}
+Kenerl和Term之间的通讯协议是：传送二进制数或代码，Kenerl通过Simulator负责二进制的运行，Term负责二进制与文本间的转换。
+
+此外，有时Term在输入SIM后无法初始化，原因是TCP包会粘在一起。解决方法是Send之后sleep一段时间。
+
 \section{实验完成情况}
+全部完成。
 
 \section{实验体会}
+如果要支持新的功能，需要同时修改Assembler、Term和Simulator，略微有些麻烦。另外汇编器的实现很巧妙。
 
 \end{document} 
