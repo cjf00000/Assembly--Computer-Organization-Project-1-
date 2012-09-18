@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2012.5.27)  18 SEP 2012 15:50
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2012.5.27)  18 SEP 2012 16:26
 entering extended mode
 **C:/Users/Chris/SkyDrive/Documents/课程/计原/Projects/Project1_Assembly/Assemb
 ly--Computer-Organization-Project-1-/doc/rep.tex
@@ -462,16 +462,25 @@ Overfull \hbox (24.88582pt too wide) in paragraph at lines 85--86
 Assembly--Computer-Organization-Project-1-/doc/result_1.png (PNG copy)> <C:/Use
 rs/Chris/SkyDrive/Documents/课程/计原/Projects/Project1_Assembly/Assembly--Comp
 uter-Organization-Project-1-/doc/result_2.png (PNG copy)>]
+Overfull \hbox (255.00607pt too wide) in paragraph at lines 127--129
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[4] <result_3.png, id=57, 273.27094pt x 161.10187pt>
+File: result_3.png Graphic file (type png)
+ <use result_3.png>
+[5 <C:/Users/Chris/SkyDrive/Documents/课程/计原/Projects/Project1_Assembly/Asse
+mbly--Computer-Organization-Project-1-/doc/result_3.png (PNG copy)>]
 (C:\Users\Chris\SkyDrive\Documents\课程\计原\Projects\Project1_Assembly\Assembl
 y--Computer-Organization-Project-1-\doc\rep.aux) ) 
 Here is how much of TeX's memory you used:
- 6877 strings out of 495362
- 94201 string characters out of 3184023
- 161857 words of memory out of 3000000
- 9890 multiletter control sequences out of 15000+200000
- 23274 words of font info for 81 fonts, out of 3000000 for 9000
+ 6923 strings out of 495362
+ 95021 string characters out of 3184023
+ 169865 words of memory out of 3000000
+ 9934 multiletter control sequences out of 15000+200000
+ 23572 words of font info for 82 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 31i,7n,35p,525b,1245s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,7n,35p,525b,1772s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/WINDOWS/Fonts/simhei.ttf>
 <C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/sim
 hei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/F
@@ -483,18 +492,18 @@ S/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C
 :/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsu
 n.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fon
 ts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WIN
-DOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf
+DOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc
 ><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/si
-mhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/
+mhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/
 Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/
-WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/CTEX/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmbx12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/CTEX/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/CTEX/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb>
-Output written on rep.pdf (3 pages, 199431 bytes).
+WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.
+ttc><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/CTEX/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/
+CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on rep.pdf (5 pages, 222583 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
+ 209 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
