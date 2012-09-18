@@ -54,6 +54,39 @@ BNEZ R4 0xf9
 \label{result_1}
 \end{figure}
 
+\section{ASCII Printable Characters}
+
+ASCII中可打印的字符集从0x20到0x7F。代码如下。
+\begin{lstlisting}
+; Print all ascii printable characters: from 20 to 7E
+; Author:	Jianfei CHEN
+; Date:		2012-9-18
+
+LI R6 0xBF		; R6 is the IO port
+SLL R6 R6 0x00
+
+LI R1 0x20		; Set initial value: print r1
+
+loop:
+SW R6 R1 0x00		; PRINT R1
+ADDIU R1 0x01
+CMPI R1 0x80
+BTNEZ loop
+NOP
+
+finish:
+JR R6			; Crash the machine
+NOP
+\end{lstlisting}
+
+程序运行结果如图~\ref{result_2}。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=13cm]{result_2.png}
+\caption{Runtime result of the ASCII Printable Characters}
+\label{result_2}
+\end{figure}
+
 \section{实验完成情况}
 
 \section{实验体会}
