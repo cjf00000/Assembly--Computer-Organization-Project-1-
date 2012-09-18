@@ -18,3 +18,4 @@ Solution
 2.	ascii_printable.s
 3.	lower_case.s
 4.	echo_digits.s
+5.	random.s
